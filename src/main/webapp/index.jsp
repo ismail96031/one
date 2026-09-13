@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NexusShop — Modern E‑Commerce</title>
+    <title>Amazon Replica — E‑Commerce</title>
 
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -12,20 +12,20 @@
     <style>
         /* ========== ROOT VARIABLES ========== */
         :root {
-            --bg: #fafaf8;
+            --bg: #eaeded;
             --bg-card: #ffffff;
-            --primary: #1a1a2e;
-            --primary-light: #2d2d44;
-            --accent: #e07a5f;
-            --accent-light: #f4d0c4;
-            --accent-dark: #c05a3e;
-            --muted: #6b6b7a;
+            --primary: #131921;
+            --primary-light: #232f3e;
+            --accent: #ff9900;
+            --accent-light: #ffe7bf;
+            --accent-dark: #e47911;
+            --muted: #565959;
             --muted-light: #a0a0b0;
-            --surface: #f0efed;
+            --surface: #f3f3f3;
             --success: #2a9d8f;
             --warning: #e9c46a;
-            --radius: 16px;
-            --radius-sm: 10px;
+            --radius: 4px;
+            --radius-sm: 3px;
             --shadow: 0 4px 24px rgba(26, 26, 46, 0.06);
             --shadow-hover: 0 12px 48px rgba(26, 26, 46, 0.10);
             --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1116,6 +1116,58 @@
                 font-size: 13px;
             }
         }
+    
+        /* ========== AMAZON-INSPIRED UI OVERRIDES ========== */
+        body { background:#eaeded; }
+        header { background:#131921; border:0; backdrop-filter:none; }
+        .header-inner { min-height:64px; }
+        .brand, .brand i, .brand .accent { color:#fff !important; }
+        .brand .accent { color:#ff9900 !important; }
+        nav.main-nav li a { color:#fff; border-radius:2px; }
+        nav.main-nav li a:hover, nav.main-nav li a.active { background:#232f3e; color:#fff; }
+        .search-wrap { background:#fff; border-radius:4px; min-width:320px; padding-left:16px; }
+        .search-wrap:focus-within { border-color:#ff9900; box-shadow:0 0 0 3px rgba(255,153,0,.35); }
+        .search-wrap button { background:#febd69; margin-right:-16px; padding:11px 16px; color:#131921; border-radius:0 3px 3px 0; }
+        .header-actions .icon-btn { color:#fff; border-radius:3px; }
+        .header-actions .icon-btn:hover { background:#232f3e; color:#ff9900; }
+        .cart-count { background:#ff9900; color:#131921; border-color:#131921; }
+        .hero { margin:0; border-radius:0; min-height:420px; background:linear-gradient(90deg,#131921 0%,#232f3e 58%,rgba(35,47,62,.7) 100%); }
+        .hero::after { content:''; position:absolute; left:0; right:0; bottom:0; height:110px; background:linear-gradient(transparent,#eaeded); z-index:0; }
+        .hero .container { z-index:1; }
+        .hero .badge { background:rgba(255,153,0,.18); color:#ffb84d; }
+        .hero h1 { font-family:Inter, sans-serif; font-size:52px; font-weight:800; }
+        .btn { border-radius:4px; }
+        .btn-primary { background:#ff9900; border-color:#ff9900; color:#131921; }
+        .btn-primary:hover { background:#e47911; border-color:#e47911; color:#fff; }
+        .btn-secondary { background:#232f3e; }
+        .section { padding:36px 0; }
+        .section-header { background:#fff; padding:18px 22px; margin-bottom:16px; box-shadow:0 1px 2px rgba(0,0,0,.12); }
+        .section-header .view-all { color:#007185; }
+        .categories-grid { gap:12px; }
+        .cat-card, .product-card, .deal-wrap, .testimonial-card { border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,.16); }
+        .cat-card { padding:18px 12px; }
+        .cat-card:hover, .product-card:hover { transform:none; border-color:#ff9900; box-shadow:0 2px 8px rgba(0,0,0,.2); }
+        .cat-card .icon-wrap { border-radius:6px; background:#fff1d8; color:#e47911; }
+        .cat-card:hover .icon-wrap { background:#ff9900; }
+        .product-card .body { padding:14px; }
+        .product-card .footer { padding:0 14px 14px; }
+        .product-card .footer .add-btn { background:#ffd814; color:#131921; border-radius:20px; }
+        .product-card .footer .add-btn:hover { background:#f7ca00; transform:none; }
+        .product-card .body .price { color:#0f1111; }
+        .product-card .wish-btn:hover { color:#e47911; }
+        .deal-wrap { background:#fff; }
+        .deal-wrap .deal-content { background:#fff; }
+        .deal-wrap .deal-content .tag { background:#cc0c39; color:#fff; }
+        .timer-box { background:#232f3e; border-radius:3px; }
+        .newsletter-wrap { background:linear-gradient(135deg,#131921,#232f3e); border-radius:4px; }
+        footer { background:#232f3e; color:#fff; border:0; margin-top:0; }
+        .footer-grid .brand-col p, .footer-grid .col ul li a, .footer-bottom { color:#ddd; }
+        .footer-grid .col h5 { color:#fff; }
+        .footer-grid .brand-col .socials a { background:#37475a; color:#fff; }
+        .footer-grid .brand-col .socials a:hover { background:#ff9900; color:#131921; }
+        .footer-bottom { border-color:#3a4553; }
+        @media (max-width:768px){ .search-wrap{min-width:140px;} .hero{min-height:340px;} .hero h1{font-size:32px;} .section-header{padding:14px;} }
+
     </style>
 </head>
 
@@ -1130,7 +1182,7 @@
                 </button>
                 <a class="brand" href="#">
                     <em class="fas fa-store-alt"></em>
-                    <span>Nexus<span class="accent">Shop</span></span>
+                    <span>A<span class="accent">mazon</span> Replica</span>
                 </a>
             </div>
 
@@ -1307,7 +1359,7 @@
                 <div class="brand-col">
                     <div class="brand">
                         <i class="fas fa-store-alt"></i>
-                        <span>Nexus<span class="accent">Shop</span></span>
+                        <span>A<span class="accent">mazon</span> Replica</span>
                     </div>
                     <p>Modern e‑commerce demo built with care. Quality products, seamless experience.</p>
                     <div class="socials">
@@ -1345,7 +1397,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; <span id="year"></span> NexusShop. All rights reserved.
+                &copy; <span id="year"></span> Amazon Replica. Demo UI only.
             </div>
         </div>
     </footer>
